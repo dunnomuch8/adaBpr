@@ -3,13 +3,14 @@ Adaboost framework implementation for Bayesian Personalized Ranking considering 
 ## Prerequisites
 * [lightfm](https://lyst.github.io/lightfm/docs/home.html#installation): BPR algorithm. To substitude the bpr package, modify the function bpr() in adaboost.py. 
 * [joblib](https://joblib.readthedocs.io/en/latest/index.html): Parallel computing.
+* [magic](https://github.com/ahupp/python-magic): A python interface to the libmagic file type identification library. 
 * Others: scipy, numpy
 
 ## Running the tests
 First, set the number of threads and batchsize in adaboost.py and eval.py.
 ```
-BATCH_SIZE=5000
-NUM_THREADS=8
+BATCH_SIZE = 5000
+NUM_THREADS = 8
 ```
 
 The script consist of 3 commands: train, test, rec(generate the recommendation list). 
@@ -38,4 +39,4 @@ Time required with mode saveMemory is less than that with mode saveTime at first
 ### Training with new data with resumed ensemble model
 View previous all models as one single model.
 
-Or, dont't do this. Resort to better solutions/algorithms considering timestamp. 
+Or, dont't do this. Resort to better solutions/algorithms. 
